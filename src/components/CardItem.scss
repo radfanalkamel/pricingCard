@@ -1,0 +1,65 @@
+$primary-white: #f8fafe;
+$secondary-white: #f7f7f7;
+$primary-dark : #0a0000;
+$gradient-blue : linear-gradient(66deg, rgb(126, 191, 223) 0%, rgb(64, 160, 163) 100%);
+$gradient-purple : linear-gradient(66deg, rgb(93, 66, 175) 0%, rgb(7, 1, 63) 100%);
+$gradient-orange : linear-gradient(66deg, rgb(233, 156, 40) 0%, rgb(187, 123, 5) 100%);;
+
+body{
+    background-color: $primary-white;
+}
+
+//Styling the card item
+.card__item{
+    padding: 8.5px;
+    min-width: min-content;
+    max-width: 300px;
+    width: 100%;
+    background-color: $secondary-white;
+    text-align: center;
+    border-radius: 2px;
+    box-shadow: -1px 11px 27px -10px rgba(192,192,192,0.4);
+    color: $primary-dark;
+    #{&}--title{
+        padding: 20px;
+        border-radius: 2px;
+        color: $primary-white;
+    }
+    #{&}--pricing{
+        padding: 30px;
+        h1{
+            padding: 20px 0;
+            font-size: 3rem;
+        }
+        p{
+            padding: 5px 0;
+            &:nth-child(2){
+                text-transform: uppercase;
+            }
+        }
+    }
+    #{&}--btn-ul{
+        margin: 10px;
+        >button{
+            width: 100%;
+        }
+        >ul{
+            text-align: left;
+            padding: 15px;
+            li{
+                padding: 7.5px 5px;
+            }
+        }
+    }
+}
+
+// Gradient Related Classes
+.blueGradient{
+    background: $gradient-blue;
+}
+.purpleGradient{
+    background: $gradient-purple;
+}
+.orangeGradient{
+    background: $gradient-orange;
+}
